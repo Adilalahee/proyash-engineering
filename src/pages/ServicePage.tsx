@@ -26,7 +26,7 @@ const ServicePage = () => {
   return (
     <>
       <Helmet>
-        <title>{`${service.titleEn} — Proyash Engineering`}</title>
+        <title>{`${service.titleEn} — Proyas Engineering`}</title>
         <meta name="description" content={service.descriptionEn} />
       </Helmet>
 

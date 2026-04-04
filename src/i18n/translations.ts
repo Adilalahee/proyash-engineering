@@ -21,7 +21,7 @@ export const translations = {
     badge: { en: "Vision 2030 Aligned", ar: "متوافق مع رؤية 2030" },
     title: { en: "Building Saudi Arabia's Future", ar: "نبني مستقبل المملكة العربية السعودية" },
     text: {
-      en: "Proyash is committed to supporting Saudi Arabia's Vision 2030 by delivering sustainable infrastructure, promoting Saudization, and driving environmental stewardship across all our operations.",
+      en: "Proyas is committed to supporting Saudi Arabia's Vision 2030 by delivering sustainable infrastructure, promoting Saudization, and driving environmental stewardship across all our operations.",
       ar: "تلتزم برويش بدعم رؤية المملكة العربية السعودية 2030 من خلال تقديم بنية تحتية مستدامة وتعزيز السعودة وقيادة الإشراف البيئي عبر جميع عملياتنا."
     },
   },
@@ -38,7 +38,7 @@ export const translations = {
   },
   about: {
     title: { en: "Our Story", ar: "قصتنا" },
-    subtitle: { en: "From SAEIR to Proyash — Three decades of engineering leadership in the Kingdom", ar: "من سائر إلى برويش — ثلاثة عقود من الريادة الهندسية في المملكة" },
+    subtitle: { en: "From SAEIR to Proyas — Three decades of engineering leadership in the Kingdom", ar: "من سائر إلى برويش — ثلاثة عقود من الريادة الهندسية في المملكة" },
     mission: { en: "Our Mission", ar: "مهمتنا" },
     missionText: {
       en: "To deliver world-class engineering and contracting services that exceed client expectations through innovation, safety, and sustainable practices.",

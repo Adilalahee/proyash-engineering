@@ -14,9 +14,9 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "1",
-    slug: "facility-management",
-    titleEn: "Facility Management",
-    titleAr: "إدارة المرافق",
+    slug: "hospitality-facility-management",
+    titleEn: "Hospitality and Facility Management",
+    titleAr: "إدارة الضيافة والمرافق",
     descriptionEn: "Comprehensive Hard & Soft FM services including building maintenance, cleaning, landscaping, and security management for commercial and government properties.",
     descriptionAr: "خدمات إدارة المرافق الشاملة بما في ذلك صيانة المباني والتنظيف والمناظر الطبيعية وإدارة الأمن للعقارات التجارية والحكومية.",
     iconName: "Building2",
@@ -98,9 +98,9 @@ export const services: Service[] = [
   },
   {
     id: "5",
-    slug: "telecommunications",
-    titleEn: "Telecommunications",
-    titleAr: "الاتصالات",
+    slug: "it-telecommunications",
+    titleEn: "IT & Telecommunications",
+    titleAr: "تكنولوجيا المعلومات والاتصالات",
     descriptionEn: "ICT infrastructure including active/passive equipment, fiber optic networks, smart parking systems, and telecommunications solutions.",
     descriptionAr: "البنية التحتية لتقنية المعلومات والاتصالات بما في ذلك المعدات النشطة/السلبية وشبكات الألياف الضوئية وأنظمة المواقف الذكية.",
     iconName: "Radio",

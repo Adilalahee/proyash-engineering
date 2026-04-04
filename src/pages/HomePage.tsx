@@ -16,12 +16,14 @@ const iconMap: Record<string, React.ReactNode> = {
   Radio: <Radio className="w-7 h-7" />,
 };
 
+{/* Stats 
 const stats = [
   { value: "1991", labelKey: "established" as const },
   { value: "650+", labelKey: "employees" as const },
   { value: "500+", labelKey: "projects" as const },
   { value: "100+", labelKey: "clients" as const },
 ];
+*/}
 
 const HomePage = () => {
   const { lang } = useLanguage();
@@ -29,7 +31,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Proyash — Engineering Excellence, Delivered</title>
+        <title>Proyas — Engineering Excellence, Delivered</title>
         <meta name="description" content="Saudi Arabia's trusted Turn-Key partner for Facility Management, HVAC, Elevators, and Environmental Solutions — aligned with Vision 2030." />
       </Helmet>
 
@@ -75,7 +77,7 @@ const HomePage = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-card border-b border-border">
+      {/* <section className="bg-card border-b border-border">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
@@ -88,7 +90,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Vision 2030 */}
       <section className="bg-background">

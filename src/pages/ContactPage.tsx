@@ -1,16 +1,40 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Map, NotebookTabs } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations, t } from "@/i18n/translations";
 import { services } from "@/data/services";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const offices = [
-  { cityEn: "Riyadh (HQ)", cityAr: "الرياض (المقر الرئيسي)", phone: "+966 11 XXX XXXX", lat: 24.7136, lng: 46.6753 },
-  { cityEn: "Jeddah", cityAr: "جدة", phone: "+966 12 XXX XXXX", lat: 21.4858, lng: 39.1925 },
-  { cityEn: "Khobar", cityAr: "الخبر", phone: "+966 13 XXX XXXX", lat: 26.2172, lng: 50.1971 },
+  { 
+    cityEn: "Dhaka (HQ)", 
+    cityAr: "داكا (المقر الرئيسي)", 
+    contactName: "Md. Jahangir Alam Talukder",
+    contactNameAr: "محمد جهانجير عالم تالوكدر", 
+    addressEn: "Prime Tower (3rd Floor), 180-181 Saheed Syed Nazrul Islam Sarani, Bijoy Nagar Road, Dhaka - 1000, Bangladesh", 
+    addressAr: "برج برايم (الطابق الثالث)، 180-181 شارع شهيد سيد نذير الإسلام ساراني، طريق بيجوي ناغار، داكا - 1000، بنغلاديش", 
+    phone: "+880 1915 318 910", 
+    lat: 23.8103, 
+    lng: 90.4125 
+  },
+  { 
+    cityEn: "Riyadh", 
+    cityAr: "الرياض",
+    contactName: "Abul Hossain Talukder",
+    contactNameAr: "أبول حسين تالوكدر",
+    addressEn: "Musabin Nusayr St. Circon Bldg Olaya Riyadh City", 
+    addressAr: "شارع مصعب بن نصير، مبنى سيركون، العليا، مدينة الرياض", 
+    phone: "+966 50 417 0618", 
+    lat: 24.7136, 
+    lng: 46.6753 
+  },
+  
 ];
+
+// { city: lang === "en" ? "Dhaka (HQ)" : "داكا (المقر الرئيسي)", address: lang === "en" ? "Prime Tower (3rd Floor), 180-181 Saheed Syed Nazrul Islam Sarani, Bijoy Nagar Road, Dhaka - 1000, Bangladesh" : "برج برايم (الطابق الثالث)، 180-181 شارع شهيد سيد نذير الإسلام ساراني، طريق بيجوي ناغار، داكا - 1000، بنغلاديش", phone: "+880 1915 318 910" },
+//     { city: lang === "en" ? "Riyadh" : "الرياض", address: lang === "en" ? "Musabin Nusayr St. Circon Bldg Olaya Riyadh City" : "شارع مصعب بن نصير، مبنى سيركون، العليا، مدينة الرياض", phone: "+966 50 417 0618" },
+//   ];
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -27,8 +51,8 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Proyash — Request a Quote</title>
-        <meta name="description" content="Get in touch with Proyash for engineering and contracting services across Saudi Arabia." />
+        <title>Contact Proyas — Request a Quote</title>
+        <meta name="description" content="Get in touch with Proyas for engineering and contracting services across Saudi Arabia." />
       </Helmet>
 
       {/* Header */}
@@ -150,13 +174,26 @@ const ContactPage = () => {
                 {offices.map((office) => (
                   <div key={office.cityEn} className="bg-card rounded-xl p-6 shadow-card border border-border">
                     <div className="flex items-start gap-3 mb-3">
-                      <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <Map className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                       <h4 className="font-heading font-bold text-foreground">
                         {lang === "en" ? office.cityEn : office.cityAr}
                       </h4>
                     </div>
+                    <div className="flex items-start gap-3 mb-3">
+                      <NotebookTabs className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <h4 className="font-heading font-bold text-foreground">
+                        {lang === "en" ? office.contactName : office.contactNameAr}
+                      </h4>
+                    </div>
+                    <div className="flex items-start gap-3 mb-3">
+                      <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <p className="text-sm text-muted-foreground">
+                        {lang === "en" ? office.addressEn : office.addressAr}
+                      </p>
+                    </div>
+                    
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Phone className="w-4 h-4" />
+                      <Phone className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                       {office.phone}
                     </div>
                   </div>
@@ -168,7 +205,7 @@ const ContactPage = () => {
                   <Mail className="w-5 h-5 text-secondary" />
                   <div>
                     <p className="text-sm text-muted-foreground">{lang === "en" ? "General Inquiries" : "استفسارات عامة"}</p>
-                    <p className="font-medium text-foreground">info@proyash.com.sa</p>
+                    <p className="font-medium text-foreground">info@proyascc.com</p>
                   </div>
                 </div>
               </div>

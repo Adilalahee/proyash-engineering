@@ -10,7 +10,7 @@ const timeline = [
   { year: "2005", titleEn: "Elevator Solutions", titleAr: "حلول المصاعد", descEn: "Added vertical transportation division — elevators, escalators, and modernization services.", descAr: "إضافة قسم النقل العمودي — المصاعد والسلالم المتحركة." },
   { year: "2010", titleEn: "ISO Certification", titleAr: "شهادة الأيزو", descEn: "Achieved ISO 9001, 14001, and OSHAS 18001 certifications across all divisions.", descAr: "الحصول على شهادات الأيزو 9001 و 14001 و OSHAS 18001." },
   { year: "2016", titleEn: "Environmental Services", titleAr: "الخدمات البيئية", descEn: "Launched city-scale cleaning and waste management operations supporting Vision 2030.", descAr: "إطلاق عمليات التنظيف وإدارة النفايات على مستوى المدن." },
-  { year: "2020", titleEn: "Rebranded to Proyash", titleAr: "إعادة العلامة التجارية إلى برويش", descEn: "Unified all divisions under the Proyash brand, becoming a Turn-Key engineering partner.", descAr: "توحيد جميع الأقسام تحت علامة برويش التجارية." },
+  { year: "2020", titleEn: "Rebranded to ", titleAr: "إعادة العلامة التجارية إلى برويش", descEn: "Unified all divisions under the Proyas brand, becoming a Turn-Key engineering partner.", descAr: "توحيد جميع الأقسام تحت علامة برويش التجارية." },
 ];
 
 const certs = [
@@ -28,8 +28,8 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Proyash — Engineering Legacy Since 1991</title>
-        <meta name="description" content="From SAEIR to Proyash — three decades of engineering leadership in Saudi Arabia." />
+        <title>About Proyas — Engineering Legacy Since 1991</title>
+        <meta name="description" content="From SAEIR to Proyas — three decades of engineering leadership in Saudi Arabia." />
       </Helmet>
 
       {/* Header */}
