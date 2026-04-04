@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Phone, Mail, MapPin, Send, Map, NotebookTabs } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Map, NotebookTabs, ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations, t } from "@/i18n/translations";
 import { services } from "@/data/services";
@@ -43,6 +44,28 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const selectedService = services.find((service) => service.slug === formData.service);
+    const serviceName = selectedService
+      ? lang === "en"
+        ? selectedService.titleEn
+        : selectedService.titleAr
+      : formData.service;
+
+    const subject = encodeURIComponent(`New Inquiry: ${serviceName}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Service: ${serviceName}`,
+        "",
+        "Message:",
+        formData.message,
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:ashmsps2@gmail.com?subject=${subject}&body=${body}`;
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
     setFormData({ name: "", email: "", service: "", message: "" });
@@ -59,6 +82,10 @@ const ContactPage = () => {
       <section className="bg-hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4 py-20 lg:py-28">
           <AnimatedSection className="max-w-3xl">
+            <Link to="/" className="inline-flex items-center gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity mb-6">
+              <ArrowLeft className="w-4 h-4" />
+              {lang === "en" ? "Back to Home" : "العودة للرئيسية"}
+            </Link>
             <h1 className="font-heading text-4xl md:text-5xl font-black uppercase mb-4">
               {t(translations.contact.title, lang)}
             </h1>

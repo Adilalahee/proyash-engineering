@@ -19,10 +19,10 @@ export const translations = {
   },
   vision: {
     badge: { en: "Vision 2030 Aligned", ar: "متوافق مع رؤية 2030" },
-    title: { en: "Building Saudi Arabia's Future", ar: "نبني مستقبل المملكة العربية السعودية" },
+    title: { en: "Building the Future of Saudi Arabia and Bangladesh", ar: "نبني مستقبل المملكة العربية السعودية وبنغلاديش" },
     text: {
-      en: "Proyas is committed to supporting Saudi Arabia's Vision 2030 by delivering sustainable infrastructure, promoting Saudization, and driving environmental stewardship across all our operations.",
-      ar: "تلتزم برويش بدعم رؤية المملكة العربية السعودية 2030 من خلال تقديم بنية تحتية مستدامة وتعزيز السعودة وقيادة الإشراف البيئي عبر جميع عملياتنا."
+      en: "Proyas is committed to supporting the national development goals of both Saudi Arabia and Bangladesh by delivering sustainable infrastructure, promoting local workforce development, and ensuring environmental responsibility across all operations.",
+      ar: "تلتزم برويش بدعم أهداف التنمية الوطنية لكل من المملكة العربية السعودية وبنغلاديش من خلال تقديم بنية تحتية مستدامة، وتعزيز تطوير القوى العاملة المحلية، وضمان المسؤولية البيئية عبر جميع العمليات."
     },
   },
   stats: {

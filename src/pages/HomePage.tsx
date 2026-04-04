@@ -1,12 +1,31 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Award, Users, Calendar, Building2, Thermometer, ArrowUpDown, Leaf, Radio } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+// import heroBg from "@/assets/hero-bg.jpg";
+// import heroAltBg from "@/assets/hero.png";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations, t } from "@/i18n/translations";
 import { services } from "@/data/services";
 import AnimatedSection from "@/components/shared/AnimatedSection";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import slider1 from "@/assets/sliders/slider1.jpg";
+import slider2 from "@/assets/sliders/slider2.jpg";
+import slider3 from "@/assets/sliders/slider3.jpg";
+import slider4 from "@/assets/sliders/slider4.jpg";
+import slider5 from "@/assets/sliders/slider5.jpeg";
+import slider6 from "@/assets/sliders/slider6.jpg";
+import slider7 from "@/assets/sliders/slider7.jpg";
+import slider8 from "@/assets/sliders/slider8.jpg";
+import slider9 from "@/assets/sliders/slider9.jpg";
+import slider10 from "@/assets/sliders/slider10.jpg";
+
+
+
+
 
 const iconMap: Record<string, React.ReactNode> = {
   Building2: <Building2 className="w-7 h-7" />,
@@ -15,6 +34,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Leaf: <Leaf className="w-7 h-7" />,
   Radio: <Radio className="w-7 h-7" />,
 };
+
+const heroSlides = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10];
 
 {/* Stats 
 const stats = [
@@ -36,10 +57,33 @@ const HomePage = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative bg-hero-gradient text-primary-foreground overflow-hidden">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-hero-gradient opacity-80" />
-        <div className="container mx-auto px-4 py-24 lg:py-36 relative">
+      <section className="relative text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            loop
+            speed={1200}
+            autoplay={{ delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: false }}
+            effect="fade"
+            allowTouchMove={false}
+            className="h-full w-full"
+          >
+            {heroSlides.map((slide, index) => (
+              <SwiperSlide key={`${slide}-${index}`}>
+                <img
+                  src={slide}
+                  alt=""
+                  className="w-full h-full object-cover mix-blend-luminosity"
+                  width={1920}
+                  height={1080}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="absolute inset-0 z-10 bg-hero-gradient opacity-55 pointer-events-none" />
+        <div className="container relative z-20 mx-auto px-4 py-24 lg:py-36">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
