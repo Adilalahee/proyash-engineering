@@ -235,6 +235,16 @@ const ContactPage = () => {
                     <p className="font-medium text-foreground">info@proyascc.com</p>
                   </div>
                 </div>
+                <div className="flex items-center gap-3 mt-4">
+  <Send className="w-5 h-5 text-green-500" />
+  <a
+    href="https://wa.me/8801915318910"
+    target="_blank"
+    className="font-medium text-foreground hover:underline"
+  >
+    WhatsApp
+  </a>
+</div>
               </div>
             </AnimatedSection>
           </div>
